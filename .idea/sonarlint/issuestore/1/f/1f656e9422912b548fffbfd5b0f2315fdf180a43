@@ -1,0 +1,13 @@
+
+b	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(²ÙÌ‡8üšâï1
+b	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(ßØµı8ıšâï1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò÷ì§8şšâï1
+¡
+java:S1845"Rename field "alphabet" to prevent any misunderstanding/clash with field "ALPHABET" defined in interface "interfaces.Alphabet".(Ø×‰›ÿÿÿÿÿ8›âï1
+u
+java:S1450"SRemove the "path" field and declare it as a local variable in the relevant methods.(ŒàÛşÿÿÿÿ8›âï1
+r
+java:S1450"URemove the "result" field and declare it as a local variable in the relevant methods.(ç“š×8‘›âï1
+G	java:S106""+Replace this use of System.out by a logger.(ü«ı×8”›âï1
+G	java:S106/"+Replace this use of System.out by a logger.(¢¼çì8–›âï1
+L	java:S1063"+Replace this use of System.out by a logger.(âúÁ¤ùÿÿÿÿ8—›âï1

@@ -1,0 +1,32 @@
+
+v
+java:S1104"TMake alphabet a static final constant or non-public and provide accessors if needed.(å¤˜¯úÿÿÿÿ8°æ´§Ï1
+z
+java:S1104"XMake nonCleanList a static final constant or non-public and provide accessors if needed.(ÉÆä•úÿÿÿÿ8°æ´§Ï1
+o
+java:S1104"RMake number a static final constant or non-public and provide accessors if needed.(¹ö¡þ8°æ´§Ï1
+P
+java:S1444".Make this "public static alphabet" field final(å¤˜¯úÿÿÿÿ8°æ´§Ï1
+T
+java:S1444"2Make this "public static nonCleanList" field final(ÉÆä•úÿÿÿÿ8°æ´§Ï1
+I
+java:S1444",Make this "public static number" field final(¹ö¡þ8°æ´§Ï1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ßÇŠã8±æ´§Ï1
+=
+java:S2129" Remove this "String" constructor(â³÷ƒ8Ãæ´§Ï1
+G
+java:S3010"%Remove this assignment of "alphabet".(ü–ÌÏûÿÿÿÿ8Äæ´§Ï1
+K
+java:S3010")Remove this assignment of "nonCleanList".(Åª—öÿÿÿÿÿ8Äæ´§Ï1
+@
+java:S3010"#Remove this assignment of "number".(Ïïœ 8Äæ´§Ï1
+E
+java:S2386"#Make member "alphabet" "protected".(ü–ÌÏûÿÿÿÿ8Äæ´§Ï1
+9
+java:S1116$"Remove this empty statement.(¾šûä8è©Ø§Ï1
+L	java:S106."+Replace this use of System.out by a logger.(¤ŠÝµúÿÿÿÿ8Çæ´§Ï1
+]	java:S1253"<This block of commented-out lines of code should be removed.(ˆº¢þþÿÿÿÿ8Çæ´§Ï1
+T
+java:S1128"2Remove this unused import 'javax.print.DocFlavor'.(ÍØƒïúÿÿÿÿ8Çæ´§Ï1
+[
+java:S1128	">Remove this unused import 'java.nio.charset.StandardCharsets'.(ï˜ÞÛ8Çæ´§Ï1

@@ -1,0 +1,26 @@
+
+v
+java:S1104"TMake alphabet a static final constant or non-public and provide accessors if needed.(å¤˜¯úÿÿÿÿ8ìä€£Ï1
+w
+java:S1104"UMake cleanList a static final constant or non-public and provide accessors if needed.(Ë¨Ó”ûÿÿÿÿ8íä€£Ï1
+o
+java:S1104"RMake number a static final constant or non-public and provide accessors if needed.(¹ö¡ş8íä€£Ï1
+P
+java:S1444".Make this "public static alphabet" field final(å¤˜¯úÿÿÿÿ8íä€£Ï1
+Q
+java:S1444"/Make this "public static cleanList" field final(Ë¨Ó”ûÿÿÿÿ8íä€£Ï1
+I
+java:S1444",Make this "public static number" field final(¹ö¡ş8íä€£Ï1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿ÍĞıÿÿÿÿ8íä€£Ï1
+=
+java:S2129" Remove this "String" constructor(â³÷ƒ8òä€£Ï1
+G
+java:S3010"%Remove this assignment of "alphabet".(ü–ÌÏûÿÿÿÿ8óä€£Ï1
+C
+java:S3010"&Remove this assignment of "cleanList".(­Şó«8óä€£Ï1
+@
+java:S3010"#Remove this assignment of "number".(Ïïœ 8óä€£Ï1
+E
+java:S2386"#Make member "alphabet" "protected".(ü–ÌÏûÿÿÿÿ8óä€£Ï1
+L	java:S106)"+Replace this use of System.out by a logger.(¤Šİµúÿÿÿÿ8õä€£Ï1
+X	java:S125:"<This block of commented-out lines of code should be removed.(‘Û†¿8öä€£Ï1

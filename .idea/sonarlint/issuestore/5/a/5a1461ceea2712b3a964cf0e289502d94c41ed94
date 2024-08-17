@@ -1,0 +1,7 @@
+
+¡
+java:S1845"Rename field "alphabet" to prevent any misunderstanding/clash with field "ALPHABET" defined in interface "interfaces.Alphabet".(Ø×‰›ÿÿÿÿÿ8ñäƒŒï1
+r
+java:S1450
+"URemove the "result" field and declare it as a local variable in the relevant methods.(ç“š×8™‹¯ñî1
+G	java:S106"+Replace this use of System.out by a logger.(ªãŒ‚8ìíŸñî1

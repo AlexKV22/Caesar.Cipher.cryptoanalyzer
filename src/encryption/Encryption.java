@@ -44,10 +44,6 @@ public class Encryption implements ReadableInterface, Alphabet, WriteableInterfa
 
 
 
-
-
-
-
 //    char[] encryptionText = new char[cleanList.length()];
 //        for (int i = 0; i < cleanList.length(); i++) {
 //        char currentChar = cleanList.toLowerCase().charAt(i);

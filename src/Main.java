@@ -7,22 +7,22 @@ import constants.Constants;
 import java.util.Scanner;
 
 public class Main {
-    private static final Scanner console = new Scanner(System.in);
+    private static final Scanner mainConsole = new Scanner(System.in);
     public static void main(String[] args)  {
         System.out.println(Constants.START_PROGRAM);
-        switch (console.nextInt()) {
+        switch (mainConsole.nextInt()) {
             case 1 : { new Encryption().encryption();
-                       console.close();
+                       mainConsole.close();
                        break;
             }
 
             case 2 : { new Decoding().decoding();
-                       console.close();
+                       mainConsole.close();
                        break;
             }
 
             case 3 : { new HackCaesarCipher().hackCaesarCipher();
-                       console.close();
+                       mainConsole.close();
                        break;
             }
             default: throw new IllegalArgumentException(Constants.ERROR_MESSAGE);

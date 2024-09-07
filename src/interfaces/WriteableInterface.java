@@ -2,7 +2,6 @@ package interfaces;
 
 import constants.Constants;
 
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,9 +9,9 @@ import java.util.Scanner;
 
 public interface WriteableInterface {
     private Path createPath() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner writeScanner = new Scanner(System.in);
         System.out.println(Constants.ASKING_FILE);
-        Path path = Path.of(scanner.nextLine());
+        Path path = Path.of(writeScanner.nextLine());
         if (Files.notExists(path)) {
             throw new RuntimeException(Constants.ERROR_FILE);
         }
@@ -24,9 +23,9 @@ public interface WriteableInterface {
     }
 
     default void writeText(String result) {
-        try(BufferedWriter writer = Files.newBufferedWriter(createPath())) {
-            writer.write(result);
-            Files.writeString(createPath(), result);
+        Path path = createPath();
+        try{
+            Files.writeString(path, result);
         } catch (IOException e) {
             throw new RuntimeException(Constants.ERROR_WRITING_FILE);
         }

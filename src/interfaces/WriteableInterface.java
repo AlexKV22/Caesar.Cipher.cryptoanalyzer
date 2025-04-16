@@ -2,18 +2,22 @@ package interfaces;
 
 import constants.Constants;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.FileSystemNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
 
 public interface WriteableInterface {
     private Path createPath() {
+        Path path = null;
         Scanner writeScanner = new Scanner(System.in);
         System.out.println(Constants.ASKING_FILE);
-        Path path = Path.of(writeScanner.nextLine());
-        if (Files.notExists(path)) {
-            throw new RuntimeException(Constants.ERROR_FILE);
+        try {
+            path = Path.of(writeScanner.nextLine());
+        } catch (FileSystemNotFoundException e) {
+            System.out.println(Constants.ERROR_FILE);
         }
         return path;
     }

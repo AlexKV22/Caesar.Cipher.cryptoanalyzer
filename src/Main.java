@@ -3,7 +3,6 @@ import decoding.Decoding;
 import encryption.Encryption;
 import hackCaesarCipher.HackCaesarCipher;
 import constants.Constants;
-
 import java.util.Scanner;
 
 public class Main {
@@ -25,7 +24,10 @@ public class Main {
                        mainConsole.close();
                        break;
             }
-            default: throw new IllegalArgumentException(Constants.ERROR_MESSAGE);
+            default: {
+                System.out.println(Constants.ERROR_MESSAGE);
+                mainConsole.close();
+            }
         }
     }
 }

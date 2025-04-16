@@ -8,7 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class HackCaesarCipher implements interfaces.Alphabet, ReadableInterface, WriteableInterface {
     private char[] alphabet;
@@ -30,7 +29,7 @@ public class HackCaesarCipher implements interfaces.Alphabet, ReadableInterface,
                 int charIndex = Arrays.binarySearch(alphabet, currentChar);
                 if (charIndex < 0) {
                     decodingText[j] = currentChar;
-                    System.out.printf("Символ %s не найден в алфавите и не будет взломан.", decodingText[j]);
+                    System.out.printf("Символ %s не найден в алфавите и не будет подобран.", decodingText[j]);
                 }
                 else {
                     decodingText[j] = alphabet[(charIndex - i + alphabet.length) % alphabet.length];

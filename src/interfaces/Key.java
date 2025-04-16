@@ -1,27 +1,28 @@
 package interfaces;
 
 import constants.Constants;
-
 import java.util.Scanner;
 
 public interface Key extends Alphabet {
     private int createKey() {
-        int number;
+        boolean validInput = true;
+        int number = 0;
         System.out.printf("Укажите ключ для шифрования, только целое число от 0 до %s %n", getAlphabet().length - 1);
         Scanner console = new Scanner(System.in);
-        if (!console.hasNextInt()) {
-            throw new IllegalArgumentException(Constants.ERROR_MESSAGE);
+        while (validInput) {
+            if (!console.hasNextInt()) {
+                System.out.println(Constants.ERROR_MESSAGE);
+                console.next();
+            } else {
+                number = console.nextInt();
+                if (number < 0 || number >= getAlphabet().length) {
+                    System.out.println(Constants.ERROR_MESSAGE);
+                } else {
+                    validInput = false;
+                }
+            }
         }
-        else {
-            number = console.nextInt();
-        }
-
-        if(number < 0 || number > getAlphabet().length -1) {
-            throw new IllegalArgumentException(Constants.ERROR_MESSAGE);
-        }
-        else {
-            return number;
-        }
+        return number;
     }
 
     default int getKey()  {

@@ -1,9 +1,8 @@
 package encryption;
-import constants.Constants;
-import interfaces.*;
-
-import java.io.IOException;
-import java.nio.file.Files;
+import interfaces.Alphabet;
+import interfaces.Key;
+import interfaces.ReadableInterface;
+import interfaces.WriteableInterface;
 import java.util.Arrays;
 
 public class Encryption implements ReadableInterface, Alphabet, WriteableInterface, Key {
@@ -24,7 +23,7 @@ public class Encryption implements ReadableInterface, Alphabet, WriteableInterfa
             int charIndex = Arrays.binarySearch(alphabet,currentChar);
             if (charIndex < 0) {
                 encryptionText[i] = currentChar;
-                System.out.printf("Символ %s не найден в алфавите и не будет зашифрован.", encryptionText[i]);
+                System.out.printf("Символ %s не найден в алфавите и не будет зашифрован.\n", encryptionText[i]);
             }
             else {
                 encryptionText[i] = alphabet[(charIndex + number) % alphabet.length];
@@ -34,30 +33,3 @@ public class Encryption implements ReadableInterface, Alphabet, WriteableInterfa
         writeText(result);
     }
 }
-
-
-
-
-
-
-
-
-
-
-//    char[] encryptionText = new char[cleanList.length()];
-//        for (int i = 0; i < cleanList.length(); i++) {
-//        char currentChar = cleanList.toLowerCase().charAt(i);
-//        int charIndex = Arrays.binarySearch(alphabet,currentChar);
-//        if (charIndex < 0) {
-//        encryptionText[i] = currentChar;
-//        System.out.print(encryptionText[i]);
-//        }
-//        else {
-//        encryptionText[i] = alphabet[(charIndex + number) % alphabet.length];
-//        System.out.print(encryptionText[i]);
-//        }
-//        }
-//        String result = new String(encryptionText);
-//        GetResultText.getResultText(result);
-//        System.out.println(RESULT);
-//        }

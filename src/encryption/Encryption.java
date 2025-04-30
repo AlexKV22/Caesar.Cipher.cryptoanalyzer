@@ -4,17 +4,20 @@ import interfaces.Key;
 import interfaces.ReadableInterface;
 import interfaces.WriteableInterface;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Encryption implements ReadableInterface, Alphabet, WriteableInterface, Key {
     private char[] alphabet;
     private String cleanText;
     private int number;
     private String result;
+    private Scanner scanner;
 
-    public Encryption()  {
+    public Encryption(Scanner scanner)  {
+        this.scanner = scanner;
         alphabet = getAlphabet();
-        number = getKey();
-        cleanText = getText();
+        number = getKey(scanner);
+        cleanText = getText(scanner);
     }
     public void encryption() {
         char[] encryptionText = cleanText.toCharArray();
@@ -30,6 +33,6 @@ public class Encryption implements ReadableInterface, Alphabet, WriteableInterfa
             }
         }
         result = new String(encryptionText);
-        writeText(result);
+        writeText(result, scanner);
     }
 }

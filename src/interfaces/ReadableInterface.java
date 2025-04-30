@@ -2,30 +2,26 @@ package interfaces;
 
 import constants.Constants;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
 
 public interface ReadableInterface {
-    private String createText() {
-        Scanner readScanner = new Scanner(System.in);
+    private String createText(Scanner scanner) {
         System.out.println(Constants.ASKING_READ_FILE);
-        Path path = Path.of(readScanner.nextLine());
+        Path path = Path.of(scanner.nextLine());
         while (!Files.exists(path)) {
             System.out.println(Constants.ASKING_READ_FILE);
-            path = Path.of(readScanner.nextLine());
+            path = Path.of(scanner.nextLine());
         }
-        byte[] bytes;
         try {
-            bytes = Files.readAllBytes(path);
+            return Files.readString(path);
         } catch (IOException e) {
-            throw new RuntimeException(Constants.ERROR_READING_FILE, e);
+            throw new RuntimeException(Constants.ERROR_READING_FILE);
         }
-        String finalText = new String(bytes, StandardCharsets.UTF_8);
-        return finalText;
     }
-     default String getText() {
-        return createText();
+
+     default String getText(Scanner scanner) {
+        return createText(scanner);
     }
 }

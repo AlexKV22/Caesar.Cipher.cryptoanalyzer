@@ -4,17 +4,17 @@ import constants.Constants;
 import java.util.Scanner;
 
 public interface Key extends Alphabet {
-    private int createKey() {
+    private int createKey(Scanner scanner) {
         boolean validInput = true;
         int number = 0;
         System.out.printf("Укажите ключ для шифрования, только целое число от 0 до %s %n", getAlphabet().length - 1);
-        Scanner console = new Scanner(System.in);
         while (validInput) {
-            if (!console.hasNextInt()) {
+            if (!scanner.hasNextInt()) {
                 System.out.println(Constants.ERROR_MESSAGE);
-                console.next();
+                scanner.nextLine();
             } else {
-                number = console.nextInt();
+                number = scanner.nextInt();
+                scanner.nextLine();
                 if (number < 0 || number >= getAlphabet().length) {
                     System.out.println(Constants.ERROR_MESSAGE);
                 } else {
@@ -25,7 +25,7 @@ public interface Key extends Alphabet {
         return number;
     }
 
-    default int getKey()  {
-        return createKey();
+    default int getKey(Scanner scanner)  {
+        return createKey(scanner);
     }
 }

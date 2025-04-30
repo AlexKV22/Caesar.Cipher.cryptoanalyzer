@@ -2,17 +2,20 @@ package decoding;
 import interfaces.*;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
-    public class Decoding implements Alphabet, ReadableInterface, WriteableInterface, Key {
+public class Decoding implements Alphabet, ReadableInterface, WriteableInterface, Key {
         private char[] alphabet;
         private String codeText;
         private int number;
         private String result;
+        private Scanner scanner;
 
-        public Decoding()  {
+        public Decoding(Scanner scanner)  {
+            this.scanner = scanner;
             alphabet = getAlphabet();
-            codeText = getText();
-            number = getKey();
+            codeText = getText(scanner);
+            number = getKey(scanner);
         }
 
         public void decoding() {
@@ -29,6 +32,6 @@ import java.util.Arrays;
                 }
             }
             result = new String(decodingText);
-            writeText(result);
+            writeText(result, scanner);
         }
     }
